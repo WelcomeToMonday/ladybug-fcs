@@ -9,6 +9,16 @@ namespace Ladybug.FSM
 
 		private IState _currentState = new State();
 
+		public StateMachine()
+		{
+
+		}
+
+		public StateMachine(IState initialState)
+		{
+			ChangeState(initialState);
+		}
+
 		public void ChangeState(IState newState)
 		{
 			if (_currentState != null)
